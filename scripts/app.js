@@ -1,30 +1,24 @@
-angular.module('shivangiApp', ['ngRoute'])
-    .config(function($routeProvider) {
-        $routeProvider
-            .when('/home', {
-                templateUrl: 'views/home.html'
-                    //controller: 'HomeCtrl',
-                    //controllerAs: 'home'
-            })
-            .when('/about', {
-                templateUrl: 'views/about.html'
-                    //controller: 'AboutCtrl',
-                    //controllerAs: 'about'
-            })
-            .when('/contact', {
-                templateUrl: 'views/contact.html'
-                    //controller: 'ContactCtrl',
-                    //controllerAs: 'contact'
-            })
-
-        .when('/result', {
-            templateUrl: 'views/result.html'
-                //controller: 'ResultCtrl',
-                //controllerAs: 'result'
+var app = angular.module('app',['ngRoute']).config(function($routeProvider) {
+    $routeProvider
+        .when('/home', {
+            templateUrl : 'views/home.html',
+            //controller  : 'profilecontrol'
         })
-
-
+        .when('/contact', {
+            templateUrl : 'views/contact.html',
+           // controller  : 'registerStudent'
+        })
+        .when('/about', {
+            templateUrl : 'views/about.html',
+            //controller  : ''
+        }) 
+        .when('/result', {
+            templateUrl : 'views/result.html',
+            //controller  : 'loginStudent'
+        })
+        
         .otherwise({
-            redirectTo: '/home'
-        });
-    });
+        redirectTo: '/'
+       
+      });
+});
